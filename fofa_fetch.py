@@ -349,8 +349,7 @@ def third_stage():
             print(f"❌ 写回 {target_file} 失败：{e}")
 
     # 写 IPTV.txt（包含更新时间与分类）
-    #beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("YY%m/%d-%H:%M:%S")
+    beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
     disclaimer_url = "https:/123.mp4"
 
     try:
@@ -367,7 +366,8 @@ def third_stage():
                         if name == ch:
                             f.write(line + "\n")
                 f.write("\n")
-            f.write(f"{beijing_now},#genre#\n\n")#=====================================显示更新时间
+            beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("YY%m/%d-%H:%M:%S")#=====================================显示更新时间
+            f.write(f"{beijing_now},#genre#\n\n")
             f.write(f"更新时间,{disclaimer_url}\n\n")
             
         print(f"🎯 IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
