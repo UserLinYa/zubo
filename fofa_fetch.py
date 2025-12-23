@@ -366,7 +366,7 @@ def third_stage():
                         if name == ch:
                             f.write(line + "\n")
                 f.write("\n")
-            beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("YY%m/%d-%H:%M:%S")#=====================================显示更新时间
+            beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%YY/%m/%d-%H:%M:%S")#=====================================显示更新时间
             f.write(f"{beijing_now},#genre#\n\n")
             f.write(f"更新时间,{disclaimer_url}\n\n")
             
