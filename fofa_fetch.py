@@ -361,8 +361,9 @@ def third_stage():
             for category, ch_list in CHANNEL_CATEGORIES.items():
                 f.write(f"{category},#genre#\n")
                 # 使用with语句读取文件
-            with open('ITV_FILE', 'r') as file:
-            f.write("file.read()")
+            ITV_Read= open('ITV_FILE', 'r',encoding='utf-8') as file:
+            print(ITV_Read.read())
+            ITV_Read.close()
                 for ch in ch_list:
                     for line in valid_lines:
                         name = line.split(",", 1)[0]
