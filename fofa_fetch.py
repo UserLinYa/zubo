@@ -20,7 +20,7 @@ IP_DIR = "ip"
 RTP_DIR = "rtp"
 ZUBO_FILE = "zubo.txt"
 IPTV_FILE = "IPTV.txt"
-ITV_FILE = 'ITV.txt'
+ITV_FILE = "ITV.txt"
 # ===============================
 # 分类与映射配置
 CHANNEL_CATEGORIES = {
@@ -360,10 +360,6 @@ def third_stage():
 
             for category, ch_list in CHANNEL_CATEGORIES.items():
                 f.write(f"{category},#genre#\n")
-infile=open(ITV_FILE,'r')
-data=infile.read()
-print(data)
-infile.close
                 for ch in ch_list:
                     for line in valid_lines:
                         name = line.split(",", 1)[0]
