@@ -356,6 +356,7 @@ def third_stage():
         with open(IPTV_FILE, "w", encoding="utf-8") as f:
             f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
             #f.write("更新时间,#genre#\n")
+            f.write(f"{beijing_now},#genre#\n\n")
             #f.write(f"{beijing_now},{disclaimer_url}\n\n")
 
             for category, ch_list in CHANNEL_CATEGORIES.items():
