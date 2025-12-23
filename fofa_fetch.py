@@ -349,16 +349,17 @@ def third_stage():
             print(f"❌ 写回 {target_file} 失败：{e}")
 
     # 写 IPTV.txt（包含更新时间与分类）
-    beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
-    disclaimer_url = "https://kakaxi-1.asia/LOGO/Disclaimer.mp4"
+    #beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S")
+    beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime(%m/%d-%H:%M:%S")
+    disclaimer_url = "https:/123.mp4"
 
     try:
         with open(IPTV_FILE, "w", encoding="utf-8") as f:
             f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
             #f.write("更新时间,#genre#\n")
-            f.write(f"{beijing_now},#genre#\n\n")
             #f.write(f"{beijing_now},{disclaimer_url}\n\n")
-
+            f.write(f"{beijing_now},#genre#\n\n")
+            f.write(f"更新时间,{disclaimer_url}\n\n")
             for category, ch_list in CHANNEL_CATEGORIES.items():
                 f.write(f"{category},#genre#\n")
                 for ch in ch_list:
