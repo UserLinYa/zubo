@@ -369,8 +369,27 @@ def third_stage():
             beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%y/%m/%d-%H:%M:%S")#=====================================显示更新时间
             f.write(f"更新时间,#genre#\n\n")
             f.write(f"{beijing_now},{disclaimer_url}\n\n")
-            
         print(f"🎯 IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
+#1.读取源文件内容
+with open(ITV_FILE, "r", encoding="utf-8") as f1:
+    content = f1.read()
+
+#2. 读取目标文件，插入指定行
+target_path = "IPTV.txt"
+insert_line = 4  # 要插入的行数
+lines = []
+
+# 读取目标文件所有行
+with open(target_path, "r", encoding="utf-8") as f2:
+    lines = f2.readlines()
+
+# 插入内容
+lines.insert(insert_line - 1, content)
+
+# 写回目标文件
+with open(target_path, "w", encoding="utf-8") as f3:
+    f3.writelines(lines)
+
     except Exception as e:
         print(f"❌ 写 IPTV.txt 失败：{e}")
 
