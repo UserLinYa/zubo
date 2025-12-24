@@ -387,7 +387,10 @@ def push_all_files():
     os.system("git add IPTV.txt || true")
     os.system('git commit -m "自动更新：RunCount、IP文件、IPTV.txt" || echo "⚠️ 无需提交"')
     os.system("git push origin main || echo '⚠️ 推送失败'")
-
+#============================================
+def check_with_os_exists(file_path):
+    #"""使用os.path.exists()检查路径是否存在"""
+    return os.path.exists(file_path)
 # ===============================
 # 主执行逻辑
 if __name__ == "__main__":
@@ -404,6 +407,7 @@ if __name__ == "__main__":
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
     # ================================================插入文件内容 
 
+if check_with_pathlib(ITV_FILE):
 #1.读取源文件内容
     with open("ITV.txt","r",encoding="utf-8") as f1:
     content = f1.read()
@@ -420,6 +424,6 @@ if __name__ == "__main__":
 #5.写回目标文件
     with open(target_path, "w", encoding="utf-8") as f3:
         f3.writelines(lines)
-
-
+else:
+    print("文件不存在，跳过")
     push_all_files()
