@@ -1,4 +1,4 @@
-全部频道,#genre#
+央卫频道,#genre#
 CCTV-1,http://rihou.cc:555/tv/[mg]CCTV-01
 CCTV-2,http://rihou.cc:555/tv/[mg]CCTV-02
 CCTV-3,http://rihou.cc:555/tv/[mg]CCTV-03
