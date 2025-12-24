@@ -407,7 +407,7 @@ if __name__ == "__main__":
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
     # ================================================插入文件内容 
 
-if check_with_pathlib(ITV_FILE):
+if check_with_os_exists(ITV_FILE):
 #1.读取源文件内容
     with open("ITV.txt","r",encoding="utf-8") as f1:
         content = f1.read()
