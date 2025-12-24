@@ -423,7 +423,7 @@ if check_with_pathlib(ITV_FILE):
     lines.insert(insert_line - 1, content)
 #5.写回目标文件
     with open(target_path, "w", encoding="utf-8") as f3:
-        f3.writelines(lines)
+    f3.writelines(lines)
 else:
     print("文件不存在，跳过")
     push_all_files()
