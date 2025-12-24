@@ -410,7 +410,7 @@ if __name__ == "__main__":
 if check_with_pathlib(ITV_FILE):
 #1.读取源文件内容
     with open("ITV.txt","r",encoding="utf-8") as f1:
-    content = f1.read()
+        content = f1.read()
     print("发现IPTV文件，开始插入内容")
 #2.读取目标文件，插入指定行
     target_path = "IPTV.txt"
@@ -418,12 +418,12 @@ if check_with_pathlib(ITV_FILE):
     lines = []
 #3.读取目标文件所有行
     with open(target_path,"r",encoding="utf-8") as f2:
-    lines = f2.readlines()
+        lines = f2.readlines()
 #4.插入内容
     lines.insert(insert_line - 1, content)
 #5.写回目标文件
     with open(target_path, "w", encoding="utf-8") as f3:
-    f3.writelines(lines)
+        f3.writelines(lines)
 else:
     print("文件不存在，跳过")
     push_all_files()
