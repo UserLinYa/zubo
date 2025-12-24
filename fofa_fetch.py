@@ -408,24 +408,23 @@ if __name__ == "__main__":
 
         if check_with_os_exists(ITV_FILE):
 #1.读取源文件内容
-            with open("ITV.txt","r",encoding="utf-8") as f1:
+            with open(ITV_FILE,"r",encoding="utf-8") as f1:
                 content = f1.read()
-            print("✅发现IPTV文件，开始插入内容")
+            print("✅ 发现IPTV文件，开始插入内容")
 #2.读取目标文件，插入指定行
-            target_path = "IPTV.txt"
             insert_line = 3  # 要插入的行数
             lines = []
 #3.读取目标文件所有行
-            with open(target_path,"r",encoding="utf-8") as f2:
+            with open(IPTV_FILE,"r",encoding="utf-8") as f2:
                 lines = f2.readlines()
 #4.插入内容
             lines.insert(insert_line - 1, content)
 #5.写回目标文件
-            with open(target_path, "w", encoding="utf-8") as f3:
+            with open(IPTV_FILE, "w", encoding="utf-8") as f3:
                 f3.writelines(lines)
-            print("✅内容插入完成，IPTV文件已更新")
+            print("✅ 内容插入完成，IPTV文件已更新")
         else:
-            print("❌IPTV文件不存在，跳过")
+            print("❌ IPTV文件不存在，跳过")
     else:
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
     push_all_files()
