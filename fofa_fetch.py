@@ -400,6 +400,8 @@ if __name__ == "__main__":
     if run_count % 10 == 0:
         second_stage()
         third_stage()
+    else:
+        print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
         
 #1.读取源文件内容
 with open("ITV.txt","r",encoding="utf-8") as f1:
@@ -420,7 +422,4 @@ lines.insert(insert_line - 1, content)
 # 写回目标文件
 with open(target_path, "w", encoding="utf-8") as f3:
     f3.writelines(lines)
-    else:
-        print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
-
     push_all_files()
