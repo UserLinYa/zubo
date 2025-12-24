@@ -403,8 +403,8 @@ if __name__ == "__main__":
     else:
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
     # ================================================插入文件内容   
-        def check_with_os_exists(ITV.txt):
-    if os.path.exists(ITV.txt):
+        def check_with_os_exists("ITV.txt"):
+    if os.path.exists("ITV.txt"):
         print("发现IPTV文件，开始插入内容")
  #1.读取源文件内容
     with open("ITV.txt","r",encoding="utf-8") as f1:
