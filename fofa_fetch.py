@@ -425,6 +425,7 @@ if check_with_os_exists(ITV_FILE):
 #5.写回目标文件
     with open(target_path, "w", encoding="utf-8") as f3:
         f3.writelines(lines)
+    print("内容插入完成，IPTV文件已更新")
 else:
-    print("文件不存在，跳过")
+    print("IPTV文件不存在，跳过")
     push_all_files()
