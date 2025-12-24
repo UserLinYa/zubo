@@ -20,7 +20,6 @@ IP_DIR = "ip"
 RTP_DIR = "rtp"
 ZUBO_FILE = "zubo.txt"
 IPTV_FILE = "IPTV.txt"
-ITV_FILE = "ITV.txt"
 # ===============================
 # 分类与映射配置
 CHANNEL_CATEGORIES = {
@@ -370,26 +369,6 @@ def third_stage():
             f.write(f"更新时间,#genre#\n\n")
             f.write(f"{beijing_now},{disclaimer_url}\n\n")
         print(f"🎯 IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
-#1.读取源文件内容
-with open(ITV_FILE, "r", encoding="utf-8") as f1:
-    content = f1.read()
-
-#2. 读取目标文件，插入指定行
-target_path = "IPTV.txt"
-insert_line = 4  # 要插入的行数
-lines = []
-
-# 读取目标文件所有行
-with open(target_path, "r", encoding="utf-8") as f2:
-    lines = f2.readlines()
-
-# 插入内容
-lines.insert(insert_line - 1, content)
-
-# 写回目标文件
-with open(target_path, "w", encoding="utf-8") as f3:
-    f3.writelines(lines)
-
     except Exception as e:
         print(f"❌ 写 IPTV.txt 失败：{e}")
 
@@ -421,6 +400,26 @@ if __name__ == "__main__":
     if run_count % 10 == 0:
         second_stage()
         third_stage()
+        
+#1.读取源文件内容
+with open("ITV.txt","r",encoding="utf-8") as f1:
+    content = f1.read()
+
+#2. 读取目标文件，插入指定行
+target_path = "IPTV.txt"
+insert_line = 4  # 要插入的行数
+lines = []
+
+# 读取目标文件所有行
+with open(target_path,"r",encoding="utf-8") as f2:
+    lines = f2.readlines()
+
+# 插入内容
+lines.insert(insert_line - 1, content)
+
+# 写回目标文件
+with open(target_path, "w", encoding="utf-8") as f3:
+    f3.writelines(lines)
     else:
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
 
