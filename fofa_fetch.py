@@ -403,8 +403,7 @@ if __name__ == "__main__":
     else:
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
     # ================================================插入文件内容 
-file_path = 'ITV.txt'
-try:
+
 #1.读取源文件内容
     with open("ITV.txt","r",encoding="utf-8") as f1:
     content = f1.read()
@@ -421,7 +420,6 @@ try:
 #5.写回目标文件
     with open(target_path, "w", encoding="utf-8") as f3:
         f3.writelines(lines)
-except FileNotFoundError:
-    print(f"[os.path.exists] 文件 {IPTV} 不存在,跳过")
+
 
     push_all_files()
