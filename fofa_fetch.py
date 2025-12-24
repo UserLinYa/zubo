@@ -402,24 +402,26 @@ if __name__ == "__main__":
         third_stage()
     else:
         print("ℹ️ 本次不是 10 的倍数，跳过第二、三阶段")
-        
-#1.读取源文件内容
-with open("ITV.txt","r",encoding="utf-8") as f1:
+    # ================================================插入文件内容   
+        def check_with_os_exists(ITV.txt):
+    if os.path.exists(ITV.txt):
+        print("发现IPTV文件，开始插入内容")
+ #1.读取源文件内容
+    with open("ITV.txt","r",encoding="utf-8") as f1:
     content = f1.read()
-
-#2. 读取目标文件，插入指定行
-target_path = "IPTV.txt"
-insert_line = 4  # 要插入的行数
-lines = []
-
-# 读取目标文件所有行
-with open(target_path,"r",encoding="utf-8") as f2:
+#2.读取目标文件，插入指定行
+    target_path = "IPTV.txt"
+    insert_line = 3  # 要插入的行数
+    lines = []
+#3.读取目标文件所有行
+    with open(target_path,"r",encoding="utf-8") as f2:
     lines = f2.readlines()
+#4.插入内容
+    lines.insert(insert_line - 1, content)
+#5.写回目标文件
+    with open(target_path, "w", encoding="utf-8") as f3:
+        f3.writelines(lines)
+    else:
+        print(f"[os.path.exists] 文件 {IPTV} 不存在,跳过")
 
-# 插入内容
-lines.insert(insert_line - 1, content)
-
-# 写回目标文件
-with open(target_path, "w", encoding="utf-8") as f3:
-    f3.writelines(lines)
     push_all_files()
