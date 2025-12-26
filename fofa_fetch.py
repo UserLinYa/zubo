@@ -101,8 +101,12 @@ def get_isp_by_regex(ip):
 
     return "未知"
 
+#============================================
+def check_with_os_exists(file_path):
+    #"""使用os.path.exists()检查路径是否存在"""
+    return os.path.exists(file_path)
+# ===========================================
 
-# ===============================
 # 第一阶段
 def first_stage():
     os.makedirs(IP_DIR, exist_ok=True)
@@ -412,11 +416,6 @@ def push_all_files():
     os.system("git add IPTV.txt || true")
     os.system('git commit -m "自动更新：RunCount、IP文件、IPTV.txt" || echo "⚠️ 无需提交"')
     os.system("git push origin main || echo '⚠️ 推送失败'")
-#============================================
-def check_with_os_exists(file_path):
-    #"""使用os.path.exists()检查路径是否存在"""
-    return os.path.exists(file_path)
-# ===============================
 # 主执行逻辑
 if __name__ == "__main__":
     # 确保目录存在
