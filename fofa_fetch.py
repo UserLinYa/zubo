@@ -109,7 +109,7 @@ def check_with_os_exists(file_path):
 
 # 第一阶段
 def first_stage():
-    print("🔔 第一阶段触发：开始爬取ip，，，")
+    print("🔔 第一阶段触发：开始爬取ip ...")
     os.makedirs(IP_DIR, exist_ok=True)
     all_ips = set()
 
