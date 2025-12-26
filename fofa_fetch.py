@@ -158,6 +158,8 @@ def first_stage():
             continue
 
     count = get_run_count() + 1
+    if count >100:
+        count=0
     save_run_count(count)
 
     for filename, ip_set in province_isp_dict.items():
