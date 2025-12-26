@@ -375,6 +375,28 @@ def third_stage():
     except Exception as e:
         print(f"❌ 写 IPTV.txt 失败：{e}")
 
+# ================================================插入文件内容 
+
+        if check_with_os_exists(ITV_FILE):
+#1.读取源文件内容
+            with open(ITV_FILE,"r",encoding="utf-8") as f1:
+                content = f1.read()
+            print("✅ 发现IPTV文件，开始插入内容")
+#2.读取目标文件，插入指定行
+            insert_line = 3  # 要插入的行数
+            lines = []
+#3.读取目标文件所有行
+            with open(IPTV_FILE,"r",encoding="utf-8") as f2:
+                lines = f2.readlines()
+#4.插入内容
+            lines.insert(insert_line - 1, content)
+#5.写回目标文件
+            with open(IPTV_FILE, "w", encoding="utf-8") as f3:
+                f3.writelines(lines)
+            print("✅ 内容插入完成，IPTV文件已更新")
+        else:
+            print("❌ IPTV文件不存在，跳过")
+
 # ===============================
 # 文件推送
 def push_all_files():
@@ -406,27 +428,6 @@ if __name__ == "__main__":
     if run_count % 5 == 0:
         second_stage()
         third_stage()
-# ================================================插入文件内容 
-
-        if check_with_os_exists(ITV_FILE):
-#1.读取源文件内容
-            with open(ITV_FILE,"r",encoding="utf-8") as f1:
-                content = f1.read()
-            print("✅ 发现IPTV文件，开始插入内容")
-#2.读取目标文件，插入指定行
-            insert_line = 3  # 要插入的行数
-            lines = []
-#3.读取目标文件所有行
-            with open(IPTV_FILE,"r",encoding="utf-8") as f2:
-                lines = f2.readlines()
-#4.插入内容
-            lines.insert(insert_line - 1, content)
-#5.写回目标文件
-            with open(IPTV_FILE, "w", encoding="utf-8") as f3:
-                f3.writelines(lines)
-            print("✅ 内容插入完成，IPTV文件已更新")
-        else:
-            print("❌ IPTV文件不存在，跳过")
     else:
         print("ℹ️ 本次不是 05 的倍数，跳过第二、三阶段")
     push_all_files()
