@@ -109,6 +109,7 @@ def check_with_os_exists(file_path):
 
 # 第一阶段
 def first_stage():
+    print("🔔 第一阶段触发：开始爬取ip，，，")
     os.makedirs(IP_DIR, exist_ok=True)
     all_ips = set()
 
@@ -163,7 +164,8 @@ def first_stage():
 
     count = get_run_count() + 1
     if count >100:
-        count=0
+        count=1
+        print("⚠️ 运行次数已达100次，将重新开始计数！！！")
     save_run_count(count)
 
     for filename, ip_set in province_isp_dict.items():
@@ -241,7 +243,7 @@ def second_stage():
         with open(ZUBO_FILE, "w", encoding="utf-8") as f:
             for line in unique.values():
                 f.write(line + "\n")
-        print(f"🎯 第二阶段完成，写入 {len(unique)} 条记录")
+        print(f"✅ 第二阶段完成，写入 {len(unique)} 条记录")
     except Exception as e:
         print(f"❌ 写文件失败：{e}")
 
@@ -375,7 +377,7 @@ def third_stage():
             beijing_now = datetime.now(timezone(timedelta(hours=8))).strftime("%y/%m/%d-%H:%M:%S")#=====================================显示更新时间
             f.write(f"更新时间,#genre#\n\n")
             f.write(f"{beijing_now},{disclaimer_url}\n\n")
-        print(f"🎯 IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
+        print(f"✅ IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
     except Exception as e:
         print(f"❌ 写 IPTV.txt 失败：{e}")
 
@@ -385,7 +387,7 @@ def third_stage():
 #1.读取源文件内容
         with open(ITV_FILE,"r",encoding="utf-8") as f1:
             content = f1.read()
-            print("✅ 发现IPTV文件，开始插入内容")
+            print("🎯 发现IPTV文件，开始插入内容")
 #2.读取目标文件，插入指定行
             insert_line = 3  # 要插入的行数
             lines = []
