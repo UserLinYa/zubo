@@ -12,7 +12,7 @@ URL_FILE = "https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
 CHANNEL_CATEGORIES = {
     "全部频道":
     [
-        "CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV5+", "CCTV6", "CCTV7","CCTV8", "CCTV9",
+        "CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5","CCTV6", "CCTV7","CCTV8", "CCTV9",
         "CCTV10", "CCTV11", "CCTV12", "CCTV13", "CCTV14", "CCTV15", "CCTV16", "CCTV17", 
         "安徽卫视","北京卫视","东方卫视","东南卫视","广东卫视","广西卫视","贵州卫视","海南卫视","河北卫视","河南卫视",
         "湖北卫视","湖南卫视","吉林卫视","江苏卫视","江西卫视","辽宁卫视","宁夏卫视","青海卫视","山东卫视","山西卫视",
@@ -27,7 +27,7 @@ CHANNEL_MAPPING = {
     "CCTV3":["CCTV-3","CCTV-03","CCTV3-综艺","CCTV-3综艺","CCTV-3综艺","CCTV3HD","CCTV-3高清","CCTV-3HD","cctv-3HD","CCTV3综艺高清","cctv3"],
     "CCTV4":["CCTV-4","CCTV-04","CCTV4-国际","CCTV-4中文国际","CCTV-4中文国际","CCTV4HD","cctv4HD","CCTV-4HD","CCTV4-中文国际","CCTV4国际高清","cctv4"],
     "CCTV5":["CCTV-5","CCTV-05","CCTV5-体育","CCTV-5体育","CCTV-5体育","CCTV5HD","CCTV-5高清","CCTV-5HD","CCTV5体育","CCTV5体育高清","cctv5"],
-    "CCTV5+":["CCTV-5+","CCTV5+体育赛事","CCTV-5+体育赛事","CCTV5+体育赛事","CCTV5+HD","CCTV-5+高清","CCTV-5+HD","cctv-5+HD","CCTV5plas","CCTV5+体育赛视高清","cctv5+"],
+    #"CCTV5+":["CCTV-5+","CCTV5+体育赛事","CCTV-5+体育赛事","CCTV5+体育赛事","CCTV5+HD","CCTV-5+高清","CCTV-5+HD","cctv-5+HD","CCTV5plas","CCTV5+体育赛视高清","cctv5+"],
     "CCTV6":["CCTV-6","CCTV-06","CCTV6-电影","CCTV-6电影","CCTV-6电影","CCTV6HD","CCTV-6高清","CCTV-6HD","cctv-6HD","CCTV6电影高清","cctv6"],
     "CCTV7":["CCTV-7","CCTV-07","CCTV7-军农","CCTV-7国防军事","CCTV-7国防军事","CCTV7HD","CCTV-7高清","CCTV-7HD","CCTV7-国防军事","CCTV7军事高清","cctv7"],
     "CCTV8":["CCTV-8","CCTV-08","CCTV8-电视剧","CCTV-8电视剧","CCTV-8电视剧","CCTV8HD","CCTV-8高清","CCTV-8HD","cctv-8HD","CCTV8电视剧高清","cctv8"],
