@@ -157,7 +157,7 @@ def first_stage():
             continue
 
     count = get_run_count() + 1
-     if count >100:
+    if count >100:
         count=1
         print("⚠️ 运行次数已达100次，将重新开始计数！！！")
     save_run_count(count)
