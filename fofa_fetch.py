@@ -100,9 +100,11 @@ def get_isp_by_regex(ip):
         return "移动"
 
     return "未知"
-
-
-# ===============================
+#============================================
+def check_with_os_exists(file_path):
+    #"""使用os.path.exists()检查路径是否存在"""
+    return os.path.exists(file_path)
+# ===========================================
 # 第一阶段
 def first_stage():
     os.makedirs(IP_DIR, exist_ok=True)
