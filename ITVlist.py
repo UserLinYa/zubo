@@ -211,7 +211,8 @@ async def main():
                     ch_items = ch_items[:RESULTS_PER_CHANNEL]
                     for item in ch_items:
                         f.write(f"{item[0]},{item[1]}\n")
-
+            f.write(f"更新时间,#genre#\n\n")
+            f.write(f"{beijing_now},{disclaimer_url}\n\n")
         print("🎉 itvlist.txt 已生成完成！")
 
 if __name__ == "__main__":
