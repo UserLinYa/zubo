@@ -25,6 +25,7 @@ ITV_FILE = "ITV.txt"
 # ===============================
 # 分类与映射配置
 CHANNEL_CATEGORIES = {
+    "全部频道": 
     [
         "CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7","CCTV8", "CCTV9",
         "CCTV10", "CCTV11", "CCTV12", "CCTV13", "CCTV14", "CCTV15", "CCTV16", "CCTV17", 
