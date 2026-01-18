@@ -371,6 +371,8 @@ def third_stage():
                         if name == ch:
                             f.write(line + "\n")
                 f.write("\n")
+            f.write(f"更新时间,#genre#\n\n")
+            f.write(f"{beijing_now},{disclaimer_url}\n\n")    
         print(f"🎯 IPTV.txt 生成完成，共 {len(valid_lines)} 条频道")
     except Exception as e:
         print(f"❌ 写 IPTV.txt 失败：{e}")
