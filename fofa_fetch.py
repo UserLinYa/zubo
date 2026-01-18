@@ -20,6 +20,7 @@ IP_DIR = "ip"
 RTP_DIR = "rtp"
 ZUBO_FILE = "zubo.txt"
 IPTV_FILE = "IPTV.txt"
+ITV_FILE = "ITV.txt"
 
 # ===============================
 # 分类与映射配置
@@ -416,7 +417,7 @@ if __name__ == "__main__":
 
     run_count = first_stage()
 
-    if run_count % 10 == 0:
+    if run_count % 5 == 0:
         second_stage()
         third_stage()
     else:
