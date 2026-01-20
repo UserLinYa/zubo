@@ -2,7 +2,7 @@ name: Run ITVlist Script
 
 on:
   schedule:
-    - cron: "0 0,12 * * *"
+    - cron: "0 0,11 * * *"
   workflow_dispatch:
 
 jobs:
