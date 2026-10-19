@@ -7,7 +7,7 @@ import os
 import time
 from urllib.parse import urljoin
 
-URL_FILE = "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.txt"#"https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
+URL_FILE = "https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
 
 CHANNEL_CATEGORIES = {
     "全部频道":
