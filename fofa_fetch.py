@@ -20,7 +20,7 @@ IP_DIR = "ip"
 RTP_DIR = "rtp"
 ZUBO_FILE = "zubo.txt"
 IPTV_FILE = "IPTV.txt"
-ITV_FILE = "iptvlist.txt" #"ITV.txt"
+ITV_FILE = "itvlist.txt" #"ITV.txt"
 
 # ===============================
 # 分类与映射配置
