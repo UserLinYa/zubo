@@ -26,6 +26,7 @@ jobs:
           pip install aiohttp requests
 
       - name: Run ITVlist script
+        timeout-minutes: 50
         run: |
           echo "=== Starting ITVlist.py ==="
           python ITVlist.py
@@ -35,6 +36,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add itvlist.txt
-          git commit -m "自定更新： itvlist.txt" || echo "No changes"
+          git add itvlist.txt speed_report.txt
+          git commit -m "自定更新： itvlist.txt（含播放源测速排序）" || echo "No changes"
           git push --force
