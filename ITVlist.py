@@ -14,7 +14,7 @@ try:
 except ImportError:  # pragma: no cover
     requests = None
 
-URL_FILE = "https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
+URL_FILE = "https://raw.githubusercontent.com/UserLinYa/zubo/main/ip_urls.txt"#"https://raw.githubusercontent.com/kakaxi-1/zubo/main/ip_urls.txt"
 
 CHANNEL_CATEGORIES = {
     "全部频道":
