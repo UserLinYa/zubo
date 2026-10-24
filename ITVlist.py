@@ -509,7 +509,7 @@ def write_speed_report(ranked, generated_at, path=SPEED_REPORT_FILE):
                 )
 
 
-def write_itvlist(channel_urls, beijing_now, disclaimer_url, path="iptvlist.txt"):
+def write_itvlist(channel_urls, beijing_now, disclaimer_url, path="itvlist.txt"):
     """按分类/频道输出 itvlist.txt，每个频道内最快的源排在最前面。"""
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"更新时间: {beijing_now}（北京时间）\n\n")
